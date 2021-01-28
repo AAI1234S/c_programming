@@ -35,7 +35,7 @@ int main()
 	printf("Last_Name:%s\n",obj1.Last_Name);
 	printf("Age :%hd\n",obj1.age);
 	printf("Mob_Num:%ld\n",obj1.Mob_Num);
-
+	printf("done");
 	return 0;
 }
 
