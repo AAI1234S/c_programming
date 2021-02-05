@@ -14,5 +14,6 @@ struct company* add_last(struct company *ptr);
 void display(struct company *ptr);
 struct company* sync_data(struct company *ptr);
 void save(struct company *ptr);
+struct company* search(struct company *ptr,char *str);
 
 

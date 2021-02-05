@@ -12,8 +12,8 @@ void save(struct company *ptr)
 
 	while(ptr)
 	{
-		fwrite(&ptr,(sizeof(struct company)-sizeof(struct company *)),1,fptr);
-		printf("Save.c: %s\t %d %.2f\n",ptr->company_name,ptr->year_establish,ptr->tunover);
+		fwrite(ptr,(sizeof(struct company)-sizeof(struct company *)),1,fptr);
+		//printf("Save.c: %s\t %d %.2f\n",ptr->company_name,ptr->year_establish,ptr->tunover);
 		ptr=ptr->next;
 	}
 

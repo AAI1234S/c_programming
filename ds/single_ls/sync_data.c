@@ -28,7 +28,7 @@ struct company* sync_data(struct company *ptr)
 			nu->year_establish=var.year_establish;
 			nu->tunover=var.tunover;
 
-			printf("save data:%s\t %d\t %.2f\n",nu->company_name,nu->year_establish,nu->tunover);
+//			printf("save data:%s\t %d\t %.2f\n",nu->company_name,nu->year_establish,nu->tunover);
 
 			if(ptr==NULL)
 			{

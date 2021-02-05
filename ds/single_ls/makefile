@@ -1,5 +1,5 @@
-a.out:main.o add_last.o display.o save.o sync_data.o
-	cc main.o add_last.o display.o save.o sync_data.o
+a.out:main.o add_last.o display.o save.o sync_data.o search.o
+	cc main.o add_last.o display.o save.o sync_data.o search.o
 
 
 main.o:main.c
@@ -15,6 +15,9 @@ save.o:save.c
 	cc -c save.c
 sync_data.o:sync_data.c
 	cc -c sync_data.c
+search.o:search.c
+	cc -c search.c
+
 
 
 

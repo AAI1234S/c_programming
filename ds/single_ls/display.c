@@ -10,7 +10,9 @@ void display(struct company *ptr)
 		while(ptr)
 		{
 			printf("--------------------------------------------------------------------------------\n");
-			printf("Company_name:%s\nYear_establish:%d\nTunover:%.2f\n",ptr->company_name,ptr->year_establish,ptr->tunover);
+			printf("Company_name:%s\n",ptr->company_name);
+			printf("Year_establish:%d\n",ptr->year_establish);
+			printf("Tunover:%f\n",ptr->tunover);
 			printf("--------------------------------------------------------------------------------\n");
 			ptr=ptr->next;
 		}
