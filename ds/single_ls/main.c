@@ -2,36 +2,43 @@
 
 int main()
 {
-	struct person *head=NULL;
+	struct company *head=NULL;
 	int choice;
 
 	while(1)
 	{
+		
 		puts("1.add_last");
-		puts("2.display");
-		puts("3.save");
-		puts("4.sync_file");
-		puts("0.exit");
-		printf(" Add Your choice:");
-		scanf("%d",&choice);
+		puts("2.save");
+		puts("3.sync_data");
+		puts("4.display");
+		puts("0.exit()");
+
+		printf("Enter the choice[  ]\b\b\b");
+		scanf(" %d",&choice);
 
 	switch(choice)
 	{
-		case 1: head=add_last(head);
+		case 1:head=add_last(head);
+		//	printf("%s %d %.2f\n",head->company_name, head->year_establish, head->tunover);
+		       break;
+
+		 case 2:save(head);
 			break;
 
-		case 2:display(head);
-		       break;
-
-		case 3:save(head);
-		       break;
-
-		case 4:head=sync_file(head);
-		       break;
-
-		case 0: exit(0);
+		 case 3:head=sync_data(head);
+			printf("%s %d %.2f\n",head->company_name, head->year_establish, head->tunover);
 			break;
+
+		 case 4:display(head);
+			break;
+
+		case 0:exit(0);
+		       break;
 	}
 	}
-return 0;
+	return 0;
 }
+
+
+

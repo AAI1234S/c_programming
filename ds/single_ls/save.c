@@ -1,30 +1,22 @@
 #include"header.h"
-
-void save(struct person *ptr)
+void save(struct company *ptr)
 {
-	FILE *fp;
+	FILE *fptr=NULL;
 
-	if(ptr==NULL)
-	{
-		printf("No data to write in a file\n");
-		exit(0);
-	}
+	fptr=fopen("data.txt","wb");
 
-	fp=fopen("sll.txt","wb");   // file open sll.txt in w mode
-	if(fp==NULL)
+	if(fptr==NULL)
 	{
-		printf("Error:To allocating a memory\n");
-		exit(1);
+		printf("Error:Open a file\n");
 	}
 
 	while(ptr)
-	{	
-		//printf("sizeof person=%ld\n",sizeof(struct person));
-		//printf("size of *person=%ld\n",sizeof(struct person *));
-		fwrite(ptr,(sizeof(struct person)-sizeof(struct person *)),1,fp);
+	{
+		fwrite(&ptr,(sizeof(struct company)-sizeof(struct company *)),1,fptr);
+		printf("Save.c: %s\t %d %.2f\n",ptr->company_name,ptr->year_establish,ptr->tunover);
 		ptr=ptr->next;
 	}
-	fclose(fp);
-}
 
+	fclose(fptr);
+}
 

@@ -1,23 +1,19 @@
 #include"header.h"
-
-void display(struct person *ptr)
+void display(struct company *ptr)
 {
-	struct person *temp=NULL;
 	if(ptr==NULL)
 	{
-		printf("Sll is empty\n");
+		printf("NO data available to show: sll is empty\n");
 	}
-
 	else
 	{
 		while(ptr)
 		{
-			printf("Name:%s\nAge:%d\n",ptr->name,ptr->age);
-
+			printf("--------------------------------------------------------------------------------\n");
+			printf("Company_name:%s\nYear_establish:%d\nTunover:%.2f\n",ptr->company_name,ptr->year_establish,ptr->tunover);
+			printf("--------------------------------------------------------------------------------\n");
 			ptr=ptr->next;
 		}
 	}
-//	return 0;
 }
 
-		
